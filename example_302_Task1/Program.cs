@@ -7,16 +7,22 @@ string text = "— Я думаю, — сказал князь, улыбаясь,
 
 string Replace(string text, char oldvalue, char newValue)
 {
-    string result = String.Empty;
-    int lenght = text.Length;
-    for(int i = 0; i < lenght; i++)
-    {
-        if(text[i]== oldvalue) result = result + $"{newValue}";
-        else result = result + $"{text[i]}";
-    }
-    return result;
+	string result = String.Empty;
+	int lenght = text.Length;
+	for(int i = 0; i < lenght; i++)
+	{
+		if(text[i]== oldvalue) result = result + $"{newValue}";
+		else result = result + $"{text[i]}";
+	}
+	return result;
 }
 string newText = Replace(text, ' ', '|');
 
+Console.WriteLine(newText);
+Console.WriteLine();
+newText = Replace(newText, 'к', 'К');
+Console.WriteLine(newText);
+Console.WriteLine();
+newText = Replace(newText, 'С', 'с');
 Console.WriteLine(newText);
 
